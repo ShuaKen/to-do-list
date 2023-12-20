@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/task.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>to-do list</title>
+</head>
+<body>
+    <div class="main">
+        <div class="create-task">
+        
+                <input type="text" id="task" name="task">
+            
+        
+                <button id = "btn-Add" onclick="addTask()">
+                    <img src="/assets/img/plus-svgrepo-com.svg" alt=""> Add
+                </button>
+            
+            
+            
+        </div>
+        
+    </div>
+    <div class="body-task" id="body-task">
+            
+            
+    </div>
+        
+            
+    
+    <script>
+        let cont = 0;
+        
+         
+        function addTask(){
+            let inputvalor = document.querySelector("#task");
+            let bodytask = document.getElementById("body-task");
+            let task = inputvalor.value;
+            
+            if(task !== "" && task !== null && task !== undefined){
+                ++cont
+                let newTask= `
+                <div class="taskOk" id="${cont}">
+                    <div class="check"><input type="checkbox" id="task-${cont}" name="task" /></div>
+                    <div class="text-task"><label for="scales">${task}</label> </div>
+                    <div class="btn-del"> <button class="del" onclick="del(${cont})"><img src="/assets/img/bin-svgrepo-com.svg" alt=""></button> </div>
+                </div>`
+                bodytask.innerHTML += newTask;
+                inputvalor.value = "";
+                inputvalor.focus();
+            
+            }
+             
+                       
+    }
+    function del(id) {
+            var task = document.getElementById(id);
+            task.remove();
+    } 
+    </script>
+</body>
+</html>

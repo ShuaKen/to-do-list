@@ -1,0 +1,21 @@
+.taskOk{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+.body-task{
+    background-color: #F0F0F0;
+    border:solid 1px #a09a9a;
+    border-radius:10px;
+    margin: 1%;
+
+}
+.check input{
+    width: 10rem;
+    height: 1.5rem;
+}
+.text-task label{
+    text-align: left;
+}
+.check, .text-task{
+    margin-top: 5px;
+}

@@ -1,0 +1,20 @@
+.main{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-style: solid;
+}
+
+.create-task input{
+    margin-left: 1rem;
+    background-color:#f0eded;
+    border:solid 1px #d4d3d3;
+    border-radius:10px;
+    height:2rem;
+    width: 15rem;
+}
+#btn-Add{
+    
+    border:solid 1px #d4d3d3;
+    border-radius:10px;
+}
